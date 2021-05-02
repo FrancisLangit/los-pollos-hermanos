@@ -1,17 +1,11 @@
+import { banner } from './banner.js';
+
 const index = (() => {
+    /**Module consolidating logic of the website's code.*/
 
     const setUp = () => {
-        let bannerBackground = document.createElement('img');
-        bannerBackground.src = '/src/data/bannerBackground.jpg';
-        bannerBackground.classList.add('bannerImage');
-
-        let bannerLogo = document.createElement('img');
-        bannerLogo.src = '/src/data/bannerLogo.png';
-        bannerLogo.classList.add('bannerImage');
-
-        let bannerDiv = document.getElementById('banner');
-        bannerDiv.appendChild(bannerBackground);
-        bannerDiv.appendChild(bannerLogo);
+        /**Sets up all the components of the website. */
+        banner.create();
     }
 
     return { setUp }
