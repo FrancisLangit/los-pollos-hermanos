@@ -9,7 +9,7 @@ const banner = (() => {
         return bannerContainer;
     }
 
-    const _createBannerImage = (file) => {
+    const _createBannerImage = (file, id) => {
         /**Returns an image node whose src is file argument passed and whose 
          * class is "bannerImage".
          * 
@@ -17,7 +17,7 @@ const banner = (() => {
          *  file (string): "src" of the image node to be returned.*/
         let bannerImage = document.createElement('img');
         bannerImage.src = `/src/data/${file}`;
-        bannerImage.classList.add('bannerImage');
+        bannerImage.id = id;
         return bannerImage;
     }
 
@@ -25,11 +25,8 @@ const banner = (() => {
         /**Creates the banner node and inserts such into the webpage before 
          * the #contents div.*/
         let bannerContainer = _createBannerContainer();
-
-        let bannerBackground = _createBannerImage('bannerBackground.jpg');
-        bannerContainer.appendChild(bannerBackground);
         
-        let bannerLogo = _createBannerImage('bannerLogo.png');
+        let bannerLogo = _createBannerImage('bannerLogo.png', 'bannerLogo');
         bannerContainer.appendChild(bannerLogo);
 
         document.body.insertBefore(
