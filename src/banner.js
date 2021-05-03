@@ -14,7 +14,8 @@ const banner = (() => {
          * class is "bannerImage".
          * 
          * Args:
-         *  file (string): "src" of the image node to be returned.*/
+         *  file (string): "src" of the image node to be returned.
+         *  id (string): ID of the image node to be returned.*/
         let bannerImage = document.createElement('img');
         bannerImage.src = `/src/data/${file}`;
         bannerImage.id = id;
