@@ -1,4 +1,4 @@
-import { index } from './index.js';
+import { index } from '../index.js';
 
 const navBar = (() => {
     /**Navigation bar found below the banner. Holds links that users click on
@@ -17,22 +17,20 @@ const navBar = (() => {
          * passed.
          * 
          * Args: 
-         *  text (string): Inner HTML of the li node to be returned.*/
+         *  text (string): Inner HTML of the li node to be returned.
+         *  page (node element): Node to be appended to the #content div.*/
         let navBarItem = document.createElement('li');
         navBarItem.innerHTML = text;
 
-        navBarItem.addEventListener('click', () => {
-            let indexContents = document.getElementById('content');
-            indexContents.innerHTML = '';
-            indexContents.appendChild(page);
-        });
+        navBarItem.addEventListener(
+            'click', index.updatePage.bind(null, page));
 
         return navBarItem;
     }
 
     const create = () => {
-        /**Creates the navigation bar and appends to the webpage before the 
-         * #content div.*/
+        /**Creates the navigation bar and appends such to the webpage before 
+         * the #content div.*/
         let navBarContainer = _createNavBarContainer();
 
         let navBarList = navBarContainer.getElementsByTagName('ul')[0];
@@ -40,7 +38,8 @@ const navBar = (() => {
             'Home', index.homePageContents));
         navBarList.appendChild(_createNavBarItem(
             'Menu', index.menuPageContents));
-        navBarList.appendChild(_createNavBarItem('About'));
+        navBarList.appendChild(_createNavBarItem(
+            'About', index.aboutPageContents));
 
         document.body.insertBefore(
             navBarContainer, document.getElementById('content'));
