@@ -1,4 +1,4 @@
-import { createImage } from '../index.js';
+import { createImage } from '../helpers.js';
 
 const homePage = (() => {
     /**Home page of the website.*/

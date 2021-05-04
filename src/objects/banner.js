@@ -1,4 +1,4 @@
-import { createImage } from '../index.js';
+import { createImage } from '../helpers.js';
 
 const banner = (() => {
     /**Banner featuring logo of Los Pollos Hermanos and background image of 
