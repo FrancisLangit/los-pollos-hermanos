@@ -7,6 +7,7 @@ const menuPage = (() => {
         menuPageHeader.innerHTML = 'Menu';
 
         let menuPageContainer = document.createElement('div');
+        menuPageContainer.id = 'menuPage';
         menuPageContainer.appendChild(menuPageHeader);
     
         return menuPageContainer;

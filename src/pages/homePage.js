@@ -11,7 +11,7 @@ const homePage = (() => {
         return image;
     }
 
-    const _createWelcomeText = () => {
+    const _createText = () => {
         /**Returns a div containing the text to be displayed about the home 
          * page images.*/
         let welcomeTextHeader = document.createElement('h2');
@@ -46,20 +46,14 @@ const homePage = (() => {
 
     const create = () => {
         /**Returns a div node holding contents of the home page.*/
-        let welcomeText = _createWelcomeText();
-        let image1 = _createImage('restaurantFacade1.jpeg');
-        let image2 = _createImage('restaurantFood.jpg');
-        let image3 = _createImage('restaurantFacade2.jpg');
-        let image4 = _createImage('restaurantMascot.jpg');
-
         let homePageContainer = document.createElement('div');
         homePageContainer.id = 'homePage';
 
-        homePageContainer.appendChild(welcomeText);
-        homePageContainer.appendChild(image1);
-        homePageContainer.appendChild(image2);
-        homePageContainer.appendChild(image3);
-        homePageContainer.appendChild(image4);
+        homePageContainer.appendChild(_createText());
+        homePageContainer.appendChild(_createImage('restaurantFacade1.jpeg'));
+        homePageContainer.appendChild(_createImage('restaurantFood.jpg'));
+        homePageContainer.appendChild(_createImage('restaurantFacade2.jpg'));
+        homePageContainer.appendChild(_createImage('restaurantMascot.jpg'));
     
         return homePageContainer;
     } 
