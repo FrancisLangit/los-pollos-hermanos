@@ -1,3 +1,5 @@
+import { createImage } from '../index.js';
+
 const banner = (() => {
     /**Banner featuring logo of Los Pollos Hermanos and background image of 
      * its food. Is placed on every tab on the website.*/
@@ -9,25 +11,12 @@ const banner = (() => {
         return bannerContainer;
     }
 
-    const _createBannerImage = (file, id) => {
-        /**Returns an image node whose src is file argument passed and whose 
-         * class is "bannerImage".
-         * 
-         * Args:
-         *  file (string): Filename of the image in /src/data/ directory.
-         *  id (string): ID of the image node to be returned.*/
-        let bannerImage = document.createElement('img');
-        bannerImage.src = `/src/data/${file}`;
-        bannerImage.id = id;
-        return bannerImage;
-    }
-
     const create = () => {
         /**Creates the banner node and inserts such into the webpage before 
          * the #contents div.*/
         let bannerContainer = _createBannerContainer();
         
-        let bannerLogo = _createBannerImage('bannerLogo.png', 'bannerLogo');
+        let bannerLogo = createImage('bannerLogo.png', 'bannerLogo');
         bannerContainer.appendChild(bannerLogo);
 
         document.body.insertBefore(

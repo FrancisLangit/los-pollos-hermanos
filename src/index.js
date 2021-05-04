@@ -5,6 +5,20 @@ import { homePage } from './pages/homePage.js';
 import { menuPage } from './pages/menuPage.js';
 import { aboutPage } from './pages/aboutPage.js';
 
+const createImage = (filename, id) => {
+    /**Returns an image node whose src is "filename" and whose id is "id".
+     * 
+     * Args:
+     *  file (string): Filename of the image in /src/data/ directory.
+     *  id (string) [optional]: ID of the image node to be returned.*/
+    let image = document.createElement('img');
+    image.src = `/src/data/${filename}`;
+    if (id) {
+        image.id = id;
+    }
+    return image;
+}
+
 const index = (() => {
     /**Module consolidating logic of the website's code.*/
 
@@ -37,4 +51,4 @@ const index = (() => {
 
 index.setUp();
 
-export { index }
+export { createImage, index }
