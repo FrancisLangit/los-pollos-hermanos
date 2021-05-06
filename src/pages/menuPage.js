@@ -1,4 +1,4 @@
-import { createImage, createText } from '../helpers.js';
+import { createText } from '../helpers.js';
 
 const menuPage = (() => {
     /**Page featuring food menu of Los Pollos Hermanos. */
@@ -15,16 +15,14 @@ const menuPage = (() => {
         menuItemContainer.classList.add('menuItem');
 
         let menuItemName = createText('p', name);
-        menuItemName.classList.add('menuItemName');
+        menuItemName.classList.add('subHeaderText');
 
         let menuItemPrice = createText('p', price);
         menuItemPrice.classList.add('menuItemPrice');
 
-        let menuItemDescription = createText('p', description);
-
         menuItemContainer.appendChild(menuItemName);
         menuItemContainer.appendChild(menuItemPrice);
-        menuItemContainer.appendChild(menuItemDescription);
+        menuItemContainer.appendChild(createText('p', description));
 
         return menuItemContainer;
     }
