@@ -20,9 +20,8 @@ const menuPage = (() => {
         let menuItemPrice = createText('p', price);
         menuItemPrice.classList.add('menuItemPrice');
 
-        menuItemContainer.appendChild(menuItemName);
-        menuItemContainer.appendChild(menuItemPrice);
-        menuItemContainer.appendChild(createText('p', description));
+        menuItemContainer.append(menuItemName, menuItemPrice, 
+            createText('p', description));
 
         return menuItemContainer;
     }
@@ -30,29 +29,33 @@ const menuPage = (() => {
     const _createMenu = () => {
         /**Returns a node containing all the items in the main menu.*/
         let menuContainer = document.createElement('div');
-        menuContainer.appendChild(_createMenuItem(
-            'Pollos Tenders',
-            '$12.95',
-            `Crispy tenders fried to perfection in our secret batter recipe,
-            this large portion is sure to satisfy anyone's appetite.`,
-        ));
-        menuContainer.appendChild(_createMenuItem(
-            'ABQ Hot Chicken Sandwich',
-            '$12.95',
-            `A delicious Fried Chicken Sandwich smothered in spicy seasoning
-            and topped off in a Kings Hawaiian Bun.`,
-        ));
-        menuContainer.appendChild(_createMenuItem(
-            'Herr Schulers Fry Frenzy',
-            '$12.00',
-            `Yummy seasoned curly fries with a crunch in every bite.`,
-        ));
-        menuContainer.appendChild(_createMenuItem(
-            'Slaw Goodman',
-            '$3.00',
-            `Our tangy and flavorful slaw, good on it's own but even better
-            when paired with the ABQ Chicken Sandwich.`,
-        ));
+        menuContainer.append(
+            _createMenuItem(
+                'Pollos Tenders',
+                '$12.95',
+                `Crispy tenders fried to perfection in our secret batter 
+                recipe, this large portion is sure to satisfy anyone's 
+                appetite.`,
+            ),
+            _createMenuItem(
+                'ABQ Hot Chicken Sandwich',
+                '$12.95',
+                `A delicious Fried Chicken Sandwich smothered in spicy 
+                seasoning and topped off in a Kings Hawaiian Bun.`,
+            ),
+            _createMenuItem(
+                'Herr Schulers Fry Frenzy',
+                '$12.00',
+                `Yummy seasoned curly fries with a crunch in every bite.`,
+            ),
+            _createMenuItem(
+                'Slaw Goodman',
+                '$3.00',
+                `Our tangy and flavorful slaw, good on it's own but even 
+                better when paired with the ABQ Chicken Sandwich.`,
+            ),
+        )
+
         return menuContainer;
     }
 
@@ -64,8 +67,7 @@ const menuPage = (() => {
 
         let menuPageContainer = document.createElement('div');
         menuPageContainer.id = 'menuPage';
-        menuPageContainer.appendChild(header);
-        menuPageContainer.appendChild(_createMenu());
+        menuPageContainer.append(header, _createMenu());
         
         return menuPageContainer;
     } 

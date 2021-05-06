@@ -26,7 +26,7 @@ const index = (() => {
         /**Sets up all the components of the website.*/
         banner.create();
         navBar.create();
-        document.getElementById('content').appendChild(aboutPageContents);
+        document.getElementById('content').appendChild(homePageContents);
     }
 
     return { 

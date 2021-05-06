@@ -17,7 +17,7 @@ const homePage = (() => {
         let quoteSource = createText('h4', '— Gus Fring, Owner & Proprietor');
 
         let restaurantDescription = createText('p', `Welcome to Los Pollos 
-            Hermanos! We're a fast-food restaurant chain specializing in fried 
+            Hermanos! We're a fast-food restaurant chain specializing in fried
             chicken, operating across the southwestern United States. Founded 
             by Chilean nationals Gustavo Fring and Max Arciniega, we're proud 
             to hold fourteen locations throughout the region. Eat at your 
@@ -25,10 +25,8 @@ const homePage = (() => {
 
         let homePageText = document.createElement('div');
         homePageText.id = 'homePageText';
-        homePageText.appendChild(header);
-        homePageText.appendChild(quoteText);
-        homePageText.appendChild(quoteSource);
-        homePageText.appendChild(restaurantDescription);
+        homePageText.append(header, quoteText, quoteSource, 
+            restaurantDescription);
 
         return homePageText;
     }
@@ -37,12 +35,13 @@ const homePage = (() => {
         /**Returns a div node holding contents of the home page.*/
         let homePageContainer = document.createElement('div');
         homePageContainer.id = 'homePage';
-
-        homePageContainer.appendChild(_createText());
-        homePageContainer.appendChild(createImage('restaurantFacade1.jpeg'));
-        homePageContainer.appendChild(createImage('restaurantFood.jpg'));
-        homePageContainer.appendChild(createImage('restaurantFacade2.jpg'));
-        homePageContainer.appendChild(createImage('restaurantMascot.jpg'));
+        homePageContainer.append(
+            _createText(),
+            createImage('restaurantFacade1.jpeg'),
+            createImage('restaurantFood.jpg'),
+            createImage('restaurantFacade2.jpg'),
+            createImage('restaurantMascot.jpg'),
+        );
 
         return homePageContainer;
     } 

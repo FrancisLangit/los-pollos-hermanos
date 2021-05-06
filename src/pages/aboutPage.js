@@ -20,9 +20,7 @@ const aboutPage = (() => {
             yours. And we look forward to continued growth!`)
         
         let container = document.createElement('div');
-        container.appendChild(header);
-        container.appendChild(text1);
-        container.appendChild(text2);
+        container.append(header, text1, text2);
 
         return container;
     }
@@ -47,10 +45,7 @@ const aboutPage = (() => {
         text3.style.fontWeight = '900';
         
         let container = document.createElement('div');
-        container.appendChild(header);
-        container.appendChild(text1);
-        container.appendChild(text2);
-        container.appendChild(text3);
+        container.append(header, text1, text2, text3)
 
         return container;
     }
@@ -70,11 +65,8 @@ const aboutPage = (() => {
             Albuquerque, New Mexico 87045`)
         
         let container = document.createElement('div');
-        container.appendChild(header);
-        container.appendChild(phoneHeader);
-        container.appendChild(phoneText);
-        container.appendChild(addressHeader);
-        container.appendChild(addressText);
+        container.append(
+            header, phoneHeader, phoneText, addressHeader, addressText);
 
         return container;
     }
@@ -85,10 +77,8 @@ const aboutPage = (() => {
         aboutPageHeader.classList.add('headerText');
 
         let aboutPageContainer = document.createElement('div');
-        aboutPageContainer.appendChild(aboutPageHeader);
-        aboutPageContainer.appendChild(_createHistorySection());
-        aboutPageContainer.appendChild(_createCultureValuesSection());
-        aboutPageContainer.appendChild(_createContactUsSection());
+        aboutPageContainer.append(aboutPageHeader, _createHistorySection(),
+            _createCultureValuesSection(), _createContactUsSection());
     
         return aboutPageContainer;
     } 
