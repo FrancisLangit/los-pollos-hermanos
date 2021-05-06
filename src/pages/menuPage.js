@@ -2,7 +2,7 @@ const menuPage = (() => {
     /**Page featuring food menu of Los Pollos Hermanos. */
     
     const _createMenuItem = () => {
-        let menuItemImage = image
+        let menuItemImage = image;
     }
 
     const create = () => {

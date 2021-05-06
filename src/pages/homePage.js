@@ -4,14 +4,18 @@ const homePage = (() => {
     /**Home page of the website.*/
 
     const _createText = () => {
-        /**Returns a div containing the text to be displayed about the home 
+        /**Returns a div containing the text to be displayed above the home 
          * page images.*/
-        let header = createText('h2', 'Los Pollos Hermanos');
+        let header = createText('p', 'Los Pollos Hermanos');
+        header.classList.add('headerText');
+
         let quoteText = createText('h3', `"It's the best ingredients. The 
             spiciest spices. All prepared with loving care! And always 
             delivered with a friendly smile. That's the Los Pollos Hermanos 
             promise."`)
+
         let quoteSource = createText('h4', '— Gus Fring, Owner & Proprietor');
+
         let restaurantDescription = createText('p', `Welcome to Los Pollos 
             Hermanos! We're a fast-food restaurant chain specializing in fried 
             chicken, operating across the southwestern United States. Founded 
@@ -19,14 +23,14 @@ const homePage = (() => {
             to hold fourteen locations throughout the region. Eat at your 
             nearest local branch now!`)
 
-        let welcomeTextContainer = document.createElement('div');
-        welcomeTextContainer.id = 'homePageWelcomeText';
-        welcomeTextContainer.appendChild(header);
-        welcomeTextContainer.appendChild(quoteText);
-        welcomeTextContainer.appendChild(quoteSource);
-        welcomeTextContainer.appendChild(restaurantDescription);
+        let homePageText = document.createElement('div');
+        homePageText.id = 'homePageText';
+        homePageText.appendChild(header);
+        homePageText.appendChild(quoteText);
+        homePageText.appendChild(quoteSource);
+        homePageText.appendChild(restaurantDescription);
 
-        return welcomeTextContainer;
+        return homePageText;
     }
 
     const create = () => {
