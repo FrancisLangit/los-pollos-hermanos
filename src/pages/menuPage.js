@@ -24,14 +24,30 @@ const menuPage = (() => {
 
     const _createMenu = () => {
         /**Returns a node containing all the items in the main menu.*/
-        let menuItem1 = _createMenuItem(
+        let menuContainer = document.createElement('div');
+        menuContainer.appendChild(_createMenuItem(
             'pollosTenders.jpg',
             '$12.95',
             `Crispy tenders fried to perfection in our secret batter recipe,
             this large portion is sure to satisfy anyone's appetite.`,
-        )
-        let menuContainer = document.createElement('div');
-        menuContainer.appendChild(menuItem1);
+        ));
+        menuContainer.appendChild(_createMenuItem(
+            'abqHotChickenSandwich.jpg',
+            '$12.95',
+            `A delicious Fried Chicken Sandwich smothered in spicy seasoning
+            and topped off in a Kings Hawaiian Bun.`,
+        ));
+        menuContainer.appendChild(_createMenuItem(
+            'herrSchulersFryFrenzy.jpg',
+            '$12.00',
+            `Yummy seasoned curly fries with a crunch in every bite.`,
+        ));
+        menuContainer.appendChild(_createMenuItem(
+            'slawGoodman.jpg',
+            '$3.00',
+            `Our tangy and flavorful slaw, good on it's own but even better
+            when paired with the ABQ Chicken Sandwich.`,
+        ));
         return menuContainer;
     }
 
