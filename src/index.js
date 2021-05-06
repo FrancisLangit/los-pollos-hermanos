@@ -23,14 +23,14 @@ const index = (() => {
     }
 
     const setUp = () => {
-        /**Sets up all the components of the website. */
+        /**Sets up all the components of the website.*/
         banner.create();
         navBar.create();
-        document.getElementById('content').appendChild(homePageContents);
+        document.getElementById('content').appendChild(menuPageContents);
     }
 
     return { 
-        homePageContents, menuPageContents, aboutPageContents, 
+        homePageContents, menuPageContents, aboutPageContents,
         updatePage, setUp,
     }
 })();
