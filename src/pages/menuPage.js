@@ -62,7 +62,6 @@ const menuPage = (() => {
     const create = () => {
         /**Returns a div node holding contents of the menu page.*/
         let header = createText('h1', 'Our Menu');
-        header.id = 'menuPageHeader';
         header.classList.add('headerText');
 
         let menuPageContainer = document.createElement('div');
