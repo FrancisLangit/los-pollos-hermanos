@@ -1,0 +1,27 @@
+.footer {
+    $footerTextColor: rgb(150, 150, 150);
+    $footerBorderColor: rgb(180, 180, 180);
+
+    border-radius: 20px;
+    border: 1px dotted $footerBorderColor;
+    color: $footerTextColor;
+    margin: 90px auto 120px auto;
+    padding: 10px 10px 20px 10px;
+    text-align: center;
+    width: 175px;
+
+    p {
+        font-family: 'Goblin One';
+        font-size: 0.75em;
+    }
+
+    a {
+        color: $footerTextColor;
+        font-size: 0.9em;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
