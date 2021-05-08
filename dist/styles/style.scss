@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url(/src/data/fonts/OpenSansRegular.ttf);
+}
+
+@font-face {
+    font-family: 'Goblin One';
+    src: url(/src/data/fonts/GoblinOneRegular.ttf);
+}
+
+@import './objects/banner';
+@import './objects/footer';
+@import './objects/navBar';
+
+@import './pages/homePage';
+@import './pages/menuPage';
+
+body {
+    margin: 0;
+    font-family: 'Open Sans';
+}
+
+#content {
+    width: 60vw;
+    margin: 90px auto 0px auto;
+}
+
+.headerText {
+    color: #941c21;
+    font-family: 'Goblin One';
+    font-size: 1.5em;
+}
+
+.subHeaderText {
+    color: #941c21;
+    font-size: 1.25em;
+    font-weight: 900;
+}
