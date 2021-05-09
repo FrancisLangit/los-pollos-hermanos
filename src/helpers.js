@@ -5,7 +5,7 @@ const createImage = (filename, id) => {
      *  file (string): Filename of the image in /src/data/images directory.
      *  id (string) [optional]: ID of the image node to be returned.*/
     let image = document.createElement('img');
-    image.src = `/dist/data/images/${filename}`;
+    image.src = `/src/data/images/${filename}`;
     if (id) {
         image.id = id;
     }
