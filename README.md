@@ -15,7 +15,7 @@ For those that would like to locally use and/or edit the repository, follow the 
 
 ## Usage
 
-![README.md usage section GIF]()
+![README.md usage section GIF](./readme_usage_gif.gif)
 
 Navigate through the website using the three links right under the page's banner. In the doing of such you'll learn wonderful things about Los Pollos Hermanos and their wonderful array of delicacies.
 
@@ -46,7 +46,7 @@ It is also worth noting that the source of Gus Fring's photo in our `README.md` 
 
 Font files can be found in the `src/data/fonts` folder of the `main` branch's repository.
 
-| Font Filename          | Source                                                       |
+| Font Filename          | http://www.lphishiring.com/Source                            |
 | ---------------------- | ------------------------------------------------------------ |
 | `GoblinOneRegular.ttf` | [Link](https://fonts.google.com/specimen/Goblin+One?category=Display,Monospace) |
 | `OpenSansRegular.ttf`  | [Link](https://fonts.google.com/specimen/Open+Sans?query=open+sans) |
