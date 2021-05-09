@@ -37,10 +37,10 @@ const homePage = (() => {
         homePageContainer.id = 'homePage';
         homePageContainer.append(
             _createText(),
-            createImage('restaurantFacade1.jpeg'),
-            createImage('restaurantFood.jpg'),
-            createImage('restaurantFacade2.jpg'),
-            createImage('restaurantMascot.jpg'),
+            createImage('restaurantFacade1'),
+            createImage('restaurantFood'),
+            createImage('restaurantFacade2'),
+            createImage('restaurantMascot'),
         );
 
         return homePageContainer;
