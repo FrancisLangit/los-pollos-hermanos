@@ -1,4 +1,4 @@
-![README.md banner]()
+![README.md banner](./readme_banner.png)
 
 `los-pollos-hermanos` is a website featuring a fanpage of the infamous Gus Fring's notorious fast-food chain. It well utilizes Webpack's module bundling and is primarily built on HTML, SCSS, and vanilla JavaScript.
 
@@ -31,6 +31,8 @@ The main challenge presented was to create a website featuring any restaurant of
 
 #### Images
 
+Image files can be found in the `src/data/images` folder of the `main` branch's repository.
+
 | Image Filename                               | Source                                                       |
 | -------------------------------------------- | ------------------------------------------------------------ |
 | `bannerLogo.png`                             | [Link](http://www.lphishiring.com/)                          |
@@ -38,7 +40,11 @@ The main challenge presented was to create a website featuring any restaurant of
 | `restaurantFacade2.jpg`                      | [Link](https://ny.eater.com/2017/4/10/15242908/los-pollos-hermanos-breaking-bad-nyc) |
 | `restaurantFood.jpg`, `restaurantMascot.jpg` | [Link](https://www.digitalspy.com/tv/ustv/a824807/breaking-bad-better-call-saul-los-pollos-hermanos-opening/) |
 
+It is also worth noting that the source of Gus Fring's photo in our `README.md` banner above can be found [here](http://www.lphishiring.com/). 
+
 #### Fonts
+
+Font files can be found in the `src/data/fonts` folder of the `main` branch's repository.
 
 | Font Filename          | Source                                                       |
 | ---------------------- | ------------------------------------------------------------ |
@@ -46,6 +52,8 @@ The main challenge presented was to create a website featuring any restaurant of
 | `OpenSansRegular.ttf`  | [Link](https://fonts.google.com/specimen/Open+Sans?query=open+sans) |
 
 #### Text
+
+Cells under "Page" column below refer to the text in their respective tabs on the actual website.
 
 | Page  | Source                                                       | What was sourced?                                         |
 | ----- | ------------------------------------------------------------ | --------------------------------------------------------- |
