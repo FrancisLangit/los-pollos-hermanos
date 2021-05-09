@@ -1,4 +1,4 @@
-import { createImage } from '../helpers.js';
+import bannerLogoImage from '../data/images/bannerLogo.png';
 
 const banner = (() => {
     /**Banner featuring logo of Los Pollos Hermanos and background image of 
@@ -11,14 +11,19 @@ const banner = (() => {
         return bannerContainer;
     }
 
+    const _createBannerLogo = () => {
+        /**Returns image node with src as bannerLogoImage imported above.*/
+        let bannerLogoNode = document.createElement('img');
+        bannerLogoNode.src = bannerLogoImage;
+        bannerLogoNode.id = 'bannerLogo';
+        return bannerLogoNode;
+    }
+
     const create = () => {
         /**Creates the banner node and inserts such into the webpage before 
          * the #contents div.*/
         let bannerContainer = _createBannerContainer();
-        
-        let bannerLogo = createImage('bannerLogo.png', 'bannerLogo');
-        bannerContainer.appendChild(bannerLogo);
-
+        bannerContainer.appendChild(_createBannerLogo());
         document.body.insertBefore(
             bannerContainer, document.getElementById('content'));
     }

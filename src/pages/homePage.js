@@ -1,9 +1,14 @@
-import { createImage, createText } from '../helpers.js';
+import { createText } from '../helpers.js';
+
+import restaurantFacade1Image from '../data/images/restaurantFacade1.jpeg';
+import restaurantFacade2Image from '../data/images/restaurantFacade2.jpg';
+import restaurantFoodImage from '../data/images/restaurantFood.jpg';
+import restaurantMascotImage from '../data/images/restaurantMascot.jpg';
 
 const homePage = (() => {
     /**Home page of the website.*/
 
-    const _createText = () => {
+    const _createHomePageText = () => {
         /**Returns a div containing the text to be displayed above the home 
          * page images.*/
         let header = createText('p', 'Los Pollos Hermanos');
@@ -31,16 +36,26 @@ const homePage = (() => {
         return homePageText;
     }
 
+    const _createHomePageImage = (imageSrc) => {
+        /**Returns an image node with src as imageSrc arg passed.
+         * 
+         * Args:
+         *  imageSrc: "src" of the image node to be returned.*/
+        let imageNode = document.createElement('img');
+        imageNode.src = imageSrc;
+        return imageNode;
+    }
+
     const create = () => {
         /**Returns a div node holding contents of the home page.*/
         let homePageContainer = document.createElement('div');
         homePageContainer.id = 'homePage';
         homePageContainer.append(
-            _createText(),
-            createImage('restaurantFacade1.jpeg'),
-            createImage('restaurantFood.jpg'),
-            createImage('restaurantFacade2.jpg'),
-            createImage('restaurantMascot.jpg'),
+            _createHomePageText(),
+            _createHomePageImage(restaurantFacade1Image),
+            _createHomePageImage(restaurantFoodImage),
+            _createHomePageImage(restaurantFacade2Image),
+            _createHomePageImage(restaurantMascotImage),
         );
 
         return homePageContainer;
