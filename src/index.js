@@ -1,3 +1,5 @@
+import './styles/style.css';
+
 import { banner } from './objects/banner.js';
 import { navBar } from './objects/navBar.js';
 
