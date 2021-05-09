@@ -80,13 +80,63 @@ eval("module.exports = __webpack_require__.p + \"1b0809d519837cb7aad3.ttf\";\n\n
 
 /***/ }),
 
+/***/ "./src/data/images/bannerLogo.png":
+/*!****************************************!*\
+  !*** ./src/data/images/bannerLogo.png ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"d0778c65b4b18bac039a.png\";\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/data/images/bannerLogo.png?");
+
+/***/ }),
+
+/***/ "./src/data/images/restaurantFacade1.jpeg":
+/*!************************************************!*\
+  !*** ./src/data/images/restaurantFacade1.jpeg ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"9f29175c8cba083e8b36.jpeg\";\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/data/images/restaurantFacade1.jpeg?");
+
+/***/ }),
+
+/***/ "./src/data/images/restaurantFacade2.jpg":
+/*!***********************************************!*\
+  !*** ./src/data/images/restaurantFacade2.jpg ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1f78faf8fce3bdb1c4f6.jpg\";\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/data/images/restaurantFacade2.jpg?");
+
+/***/ }),
+
+/***/ "./src/data/images/restaurantFood.jpg":
+/*!********************************************!*\
+  !*** ./src/data/images/restaurantFood.jpg ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"2f0ab9dee024b73d1730.jpg\";\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/data/images/restaurantFood.jpg?");
+
+/***/ }),
+
+/***/ "./src/data/images/restaurantMascot.jpg":
+/*!**********************************************!*\
+  !*** ./src/data/images/restaurantMascot.jpg ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"8bb43d5739c674a600c0.jpg\";\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/data/images/restaurantMascot.jpg?");
+
+/***/ }),
+
 /***/ "./src/helpers.js":
 /*!************************!*\
   !*** ./src/helpers.js ***!
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createImage\": () => (/* binding */ createImage),\n/* harmony export */   \"createText\": () => (/* binding */ createText)\n/* harmony export */ });\nconst createImage = (filename, id) => {\n    /**Returns an image node whose src is \"filename\" and whose id is \"id\".\n     * \n     * Args:\n     *  file (string): Filename of the image in /src/data/images directory.\n     *  id (string) [optional]: ID of the image node to be returned.*/\n    let image = document.createElement('img');\n    image.src = `/src/data/images/${filename}`;\n    if (id) {\n        image.id = id;\n    }\n    return image;\n}\n\nconst createText = (elementType, text) => {\n    /**Returns a text node whose element type is \"elementType\" and whose text\n     * content is equal to \"text\".*/\n    let textNode = document.createElement(elementType);\n    textNode.textContent = text;\n    return textNode; \n}\n\n\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/helpers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createImage\": () => (/* binding */ createImage),\n/* harmony export */   \"createText\": () => (/* binding */ createText)\n/* harmony export */ });\n/* harmony import */ var _data_images_bannerLogo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/images/bannerLogo.png */ \"./src/data/images/bannerLogo.png\");\n/* harmony import */ var _data_images_restaurantFacade1_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data/images/restaurantFacade1.jpeg */ \"./src/data/images/restaurantFacade1.jpeg\");\n/* harmony import */ var _data_images_restaurantFacade2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data/images/restaurantFacade2.jpg */ \"./src/data/images/restaurantFacade2.jpg\");\n/* harmony import */ var _data_images_restaurantFood_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data/images/restaurantFood.jpg */ \"./src/data/images/restaurantFood.jpg\");\n/* harmony import */ var _data_images_restaurantMascot_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/images/restaurantMascot.jpg */ \"./src/data/images/restaurantMascot.jpg\");\n\n\n\n\n\n\nconst createImage = (fileKey, id) => {\n    /**Returns an image node whose src is \"filename\" and whose id is \"id\".\n     * \n     * Args:\n     *  fileKey (string): Key of the image in imageFiles object below.\n     *  id (string) [optional]: ID of the image node to be returned.*/\n\n    const imageFiles = {\n        'bannerLogo': _data_images_bannerLogo_png__WEBPACK_IMPORTED_MODULE_0__,\n        'restaurantFacade1': _data_images_restaurantFacade1_jpeg__WEBPACK_IMPORTED_MODULE_1__,\n        'restaurantFacade2': _data_images_restaurantFacade2_jpg__WEBPACK_IMPORTED_MODULE_2__,\n        'restaurantFood': _data_images_restaurantFood_jpg__WEBPACK_IMPORTED_MODULE_3__,\n        'restaurantMascot': _data_images_restaurantMascot_jpg__WEBPACK_IMPORTED_MODULE_4__,\n    }\n    let image = document.createElement('img');\n    image.src = imageFiles[fileKey];\n    if (id) {\n        image.id = id;\n    }\n    return image;\n}\n\nconst createText = (elementType, text) => {\n    /**Returns a text node whose element type is \"elementType\" and whose text\n     * content is equal to \"text\".*/\n    let textNode = document.createElement(elementType);\n    textNode.textContent = text;\n    return textNode; \n}\n\n\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/helpers.js?");
 
 /***/ }),
 
@@ -106,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"banner\": () => (/* binding */ banner)\n/* harmony export */ });\n/* harmony import */ var _helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers.js */ \"./src/helpers.js\");\n\n\nconst banner = (() => {\n    /**Banner featuring logo of Los Pollos Hermanos and background image of \n     * its food. Is placed on every tab on the website.*/\n\n    const _createBannerContainer = () => {\n        /**Returns the div that'll contain all the banner's nodes.*/\n        let bannerContainer = document.createElement('div');\n        bannerContainer.id = 'banner';\n        return bannerContainer;\n    }\n\n    const create = () => {\n        /**Creates the banner node and inserts such into the webpage before \n         * the #contents div.*/\n        let bannerContainer = _createBannerContainer();\n        \n        let bannerLogo = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('bannerLogo.png', 'bannerLogo');\n        bannerContainer.appendChild(bannerLogo);\n\n        document.body.insertBefore(\n            bannerContainer, document.getElementById('content'));\n    }\n\n    return { create }\n})();\n\n\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/objects/banner.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"banner\": () => (/* binding */ banner)\n/* harmony export */ });\n/* harmony import */ var _helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers.js */ \"./src/helpers.js\");\n/* harmony import */ var _data_images_bannerLogo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/images/bannerLogo.png */ \"./src/data/images/bannerLogo.png\");\n\n\n\n\nconst banner = (() => {\n    /**Banner featuring logo of Los Pollos Hermanos and background image of \n     * its food. Is placed on every tab on the website.*/\n\n    const _createBannerContainer = () => {\n        /**Returns the div that'll contain all the banner's nodes.*/\n        let bannerContainer = document.createElement('div');\n        bannerContainer.id = 'banner';\n        return bannerContainer;\n    }\n\n    const create = () => {\n        /**Creates the banner node and inserts such into the webpage before \n         * the #contents div.*/\n        let bannerContainer = _createBannerContainer();\n        \n        let bannerLogo = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('bannerLogo', 'bannerLogo');\n\n        bannerContainer.appendChild(bannerLogo);\n\n        document.body.insertBefore(\n            bannerContainer, document.getElementById('content'));\n    }\n\n    return { create }\n})();\n\n\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/objects/banner.js?");
 
 /***/ }),
 
@@ -136,7 +186,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"homePage\": () => (/* binding */ homePage)\n/* harmony export */ });\n/* harmony import */ var _helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers.js */ \"./src/helpers.js\");\n\n\nconst homePage = (() => {\n    /**Home page of the website.*/\n\n    const _createText = () => {\n        /**Returns a div containing the text to be displayed above the home \n         * page images.*/\n        let header = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createText)('p', 'Los Pollos Hermanos');\n        header.classList.add('headerText');\n\n        let quoteText = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createText)('h3', `\"It's the best ingredients. The \n            spiciest spices. All prepared with loving care! And always \n            delivered with a friendly smile. That's the Los Pollos Hermanos \n            promise.\"`)\n\n        let quoteSource = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createText)('h4', '— Gus Fring, Owner & Proprietor');\n\n        let restaurantDescription = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createText)('p', `Welcome to Los Pollos \n            Hermanos! We're a fast-food restaurant chain specializing in fried\n            chicken, operating across the southwestern United States. Founded \n            by Chilean nationals Gustavo Fring and Max Arciniega, we're proud \n            to hold fourteen locations throughout the region. Eat at your \n            nearest local branch now!`)\n\n        let homePageText = document.createElement('div');\n        homePageText.id = 'homePageText';\n        homePageText.append(header, quoteText, quoteSource, \n            restaurantDescription);\n\n        return homePageText;\n    }\n\n    const create = () => {\n        /**Returns a div node holding contents of the home page.*/\n        let homePageContainer = document.createElement('div');\n        homePageContainer.id = 'homePage';\n        homePageContainer.append(\n            _createText(),\n            (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('restaurantFacade1.jpeg'),\n            (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('restaurantFood.jpg'),\n            (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('restaurantFacade2.jpg'),\n            (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('restaurantMascot.jpg'),\n        );\n\n        return homePageContainer;\n    } \n\n    return { create }\n})();\n\n\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/pages/homePage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"homePage\": () => (/* binding */ homePage)\n/* harmony export */ });\n/* harmony import */ var _helpers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers.js */ \"./src/helpers.js\");\n\n\nconst homePage = (() => {\n    /**Home page of the website.*/\n\n    const _createText = () => {\n        /**Returns a div containing the text to be displayed above the home \n         * page images.*/\n        let header = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createText)('p', 'Los Pollos Hermanos');\n        header.classList.add('headerText');\n\n        let quoteText = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createText)('h3', `\"It's the best ingredients. The \n            spiciest spices. All prepared with loving care! And always \n            delivered with a friendly smile. That's the Los Pollos Hermanos \n            promise.\"`)\n\n        let quoteSource = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createText)('h4', '— Gus Fring, Owner & Proprietor');\n\n        let restaurantDescription = (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createText)('p', `Welcome to Los Pollos \n            Hermanos! We're a fast-food restaurant chain specializing in fried\n            chicken, operating across the southwestern United States. Founded \n            by Chilean nationals Gustavo Fring and Max Arciniega, we're proud \n            to hold fourteen locations throughout the region. Eat at your \n            nearest local branch now!`)\n\n        let homePageText = document.createElement('div');\n        homePageText.id = 'homePageText';\n        homePageText.append(header, quoteText, quoteSource, \n            restaurantDescription);\n\n        return homePageText;\n    }\n\n    const create = () => {\n        /**Returns a div node holding contents of the home page.*/\n        let homePageContainer = document.createElement('div');\n        homePageContainer.id = 'homePage';\n        homePageContainer.append(\n            _createText(),\n            (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('restaurantFacade1'),\n            (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('restaurantFood'),\n            (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('restaurantFacade2'),\n            (0,_helpers_js__WEBPACK_IMPORTED_MODULE_0__.createImage)('restaurantMascot'),\n        );\n\n        return homePageContainer;\n    } \n\n    return { create }\n})();\n\n\n\n//# sourceURL=webpack://los-pollos-hermanos/./src/pages/homePage.js?");
 
 /***/ }),
 
