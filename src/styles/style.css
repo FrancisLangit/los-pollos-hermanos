@@ -63,6 +63,7 @@
 
 #navBar li:hover {
   color: #fccc00;
+  cursor: pointer;
 }
 
 #homePage img {
